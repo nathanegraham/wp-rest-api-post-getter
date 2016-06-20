@@ -20,9 +20,9 @@ The files in this repository can be used to display posts using the WP REST API 
 2. Download or clone this repository
 2. Open script.js in your favorite editor
 3. On line 2, copy and paste the domain for the WP site you want to get posts from and add "/forms/wp-json/wp/v2" to the path like this
-'''javascript
+```javascript
 var endpoint = "https://yourdomain.com/forms/wp-json/wp/v2",
-'''
+```
 4. Upload the three Javascript files to your external site
 5. Copy the relevant HTML and paste it into your template page(s)
 6. Add styles and reorganize as needed
@@ -30,10 +30,10 @@ var endpoint = "https://yourdomain.com/forms/wp-json/wp/v2",
 ###Tips
 
 * To change the number of posts that display, **open script.js** and change the value on **line 3**. For example, this shows 2 posts:
-'''javascript
+```javascript
 itemsPerPage = 2,
-'''
+```
 * Delete this line to remove the loading message
-'''
+```
 <div class="loading" v-show="loading">loading...</div>
-'''
+```
