@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WP Post Feed</title>
+
+<!--Inline styles you will likely throw away-->
+  <style>
+    .item .thumb{
+      background-size: cover;
+      width: 60px;
+      height: 60px;
+      float: left;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+    .item .date{color:#888;}
+
+    .more{margin-top:20px;}
+  </style>
+
+</head>
+<!--Copy the stuff between the body tags and add it to your webpage-->
+<body>
+
+<div id="post_feed">
+  <div class="loading" v-show="loading">loading...</div><!--You will probably want to just remove this line-->
+
+  <div class="item" v-for="item in items | more showed">
+    <div class="thumb" v-thumb="item.featured_media" v-show="item.featured_media"></div>
+
+    <a href="{{item.link}}" target="_blank" class="title">{{item.title.rendered}}</a>
+    <div class="date">{{item.date | formatDate}}</div>
+    <div class="desc">{{{item.excerpt.rendered | removeMoreLink}}}</div>
+  </div>
+
+  <button class="more" @click="showMore" v-show="items.length > showed">show more</button>
+
+</div>
+
+<script src="vue.min.js"></script>
+<script src="vue-resource.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
