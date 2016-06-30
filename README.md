@@ -1,5 +1,8 @@
 # Get WP Posts Using REST API and Javascript
 
+###Note
+For a full tutorial on how to use these files, I've added created a [detailed guide](http://www.digitalborn.org/display-wp-posts-rest-api/).
+
 ###Overview
 
 The files in this repository can be used to display posts using the WP REST API from a WordPress site on an external site. You can see a minimalist demo on this approach on [my site](http://nathanegraham.github.io/).
@@ -21,7 +24,7 @@ The files in this repository can be used to display posts using the WP REST API 
 2. Open script.js in your favorite editor
 3. On line 2, copy and paste the domain for the WP site you want to get posts from and add "/forms/wp-json/wp/v2" to the path like this
 ```javascript
-var endpoint = "https://yourdomain.com/forms/wp-json/wp/v2",
+var endpoint = "https://yourdomain.com/wp-json/wp/v2",
 ```
 4. Upload the three Javascript files to your external site
 5. Copy the relevant HTML and paste it into your template page(s)
